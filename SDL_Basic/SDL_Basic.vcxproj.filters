@@ -45,6 +45,12 @@
     <Image Include="Image\Texture\texture.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Image\ColorKeying\background.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Image\ColorKeying\foo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Image.cpp">
