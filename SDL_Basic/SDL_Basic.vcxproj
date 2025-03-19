@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -71,12 +71,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>F:\SDL_Image\SDL2_image-2.8.8\include;F:\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>F:\SDL_Image\SDL2_image-2.8.8\lib\x64;F:\SDL2\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>F:\SDL_Image\SDL2_image-2.8.8\include;F:\SDL2_ttf\SDL2_ttf-2.24.0\include;F:\SDL2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\SDL2_ttf\SDL2_ttf-2.24.0\lib\x64;F:\SDL_Image\SDL2_image-2.8.8\lib\x64;F:\SDL2\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>F:\SDL_Image\SDL2_image-2.8.8\include;F:\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>F:\SDL_Image\SDL2_image-2.8.8\lib\x64;F:\SDL2\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>F:\SDL_Image\SDL2_image-2.8.8\include;F:\SDL2_ttf\SDL2_ttf-2.24.0\include;F:\SDL2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\SDL2_ttf\SDL2_ttf-2.24.0\lib\x64;F:\SDL_Image\SDL2_image-2.8.8\lib\x64;F:\SDL2\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -116,7 +116,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -133,7 +133,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -151,10 +151,17 @@
     <Image Include="Image\Texture\texture.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\clip_rendering.cpp" />
+    <ClCompile Include="Code\clip_rendering.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Code\color_keying.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Code\color_modulation.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Code\geometry_redering.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
