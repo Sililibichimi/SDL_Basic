@@ -140,6 +140,7 @@
     <Image Include="Image\ClipRendering\dots.png" />
     <Image Include="Image\ColorKeying\background.png" />
     <Image Include="Image\ColorKeying\foo.png" />
+    <Image Include="Image\color_modulation\colors.png" />
     <Image Include="Image\HelloImage\hello_world.bmp" />
     <Image Include="Image\Png\loaded.png" />
     <Image Include="Image\PressImage\down.bmp" />

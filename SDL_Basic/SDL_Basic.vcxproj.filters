@@ -54,6 +54,9 @@
     <Image Include="Image\ClipRendering\dots.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Image\color_modulation\colors.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Image.cpp">
