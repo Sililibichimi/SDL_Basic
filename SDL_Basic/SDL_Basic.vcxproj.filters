@@ -57,6 +57,12 @@
     <Image Include="Image\color_modulation\colors.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Image\alpha_blending\fadein.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Image\alpha_blending\fadeout.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Image.cpp">
@@ -81,6 +87,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Code\color_modulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\alpha_blending.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
