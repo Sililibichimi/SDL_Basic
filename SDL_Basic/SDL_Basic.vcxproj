@@ -139,6 +139,7 @@
   <ItemGroup>
     <Image Include="Image\alpha_blending\fadein.png" />
     <Image Include="Image\alpha_blending\fadeout.png" />
+    <Image Include="Image\AnimatedSprite\foo.png" />
     <Image Include="Image\ClipRendering\dots.png" />
     <Image Include="Image\ColorKeying\background.png" />
     <Image Include="Image\ColorKeying\foo.png" />
@@ -155,6 +156,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\alpha_blending.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Code\animated_vsync.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>

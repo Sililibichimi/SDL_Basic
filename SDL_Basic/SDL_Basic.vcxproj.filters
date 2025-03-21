@@ -63,6 +63,9 @@
     <Image Include="Image\alpha_blending\fadeout.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Image\AnimatedSprite\foo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Image.cpp">
@@ -90,6 +93,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Code\alpha_blending.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\animated_vsync.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
