@@ -152,6 +152,7 @@
     <Image Include="Image\PressImage\right.bmp" />
     <Image Include="Image\PressImage\stretch.bmp" />
     <Image Include="Image\PressImage\up.bmp" />
+    <Image Include="Image\Rou_flip\arrow.png" />
     <Image Include="Image\Texture\texture.png" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +193,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Code\rendering_and_texture.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Code\rotation_and_flipping.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
