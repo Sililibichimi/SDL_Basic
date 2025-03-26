@@ -69,6 +69,9 @@
     <Image Include="Image\Rou_flip\arrow.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Image\Button\button.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Image.cpp">
@@ -104,5 +107,17 @@
     <ClCompile Include="Code\rotation_and_flipping.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Code\true_type_font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\mouse_event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\key_state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="FontType\lazy.ttf" />
   </ItemGroup>
 </Project>
